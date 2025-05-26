@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+ 
+}
+
+header {
+  color:#255919;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #F4F6F5;
+}
+
+.cta {
+  color: black;
+  display: inline-block;
+  padding: 5px;
+margin-bottom: 30px;
+  
+}
+
+.image1{
+  position: relative;
+
+}
+.text-below {
+  position:absolute;
+  color :black;
+  font-size: 2em;
+   left: 30%;
+   top: 80%;
+}
+
+.image{  
+  
+  display: flex;
+  justify-content: space-between;
+  border-radius : 550px;}
+  
+
+
+section p{
+  color: black;
+  font-size: 2em;
+}
+#container {
+  background-repeat: round;
+}
+.titre{
+  text-align: center;
+  font-size: 100px;
+}
+
+
+
+
+
+
+

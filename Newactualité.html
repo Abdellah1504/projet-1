@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -42,10 +43,10 @@
                 
                 <br><div class = "color2 text-center  ">Ajouter une actualité  </div> <br>                
                
-              <form  method="get" action="sauvegarde" class="bl-back1 ">
+            <form id="newsform" method="get" action="sauvegarde" class="bl-back1 ">
                 <div class="row text-center  ">
                   <div class=" col-100  col-sm-100" >                
-                     <br><br> <input  type="text"  placeholder ="Le titre de mon actualité"><br>
+                     <br><br> <input  type="text"  id="titre" placeholder ="Le titre de mon actualité"><br>
                   </div>
                 </div>
                 <div class="row text-center  ">
@@ -55,13 +56,13 @@
                 </div>
                 <div class="row text-center  ">
                   <div class="col-100  col-sm-100" >
-                    <br><textarea name="message" id="message" placeholder="Son contenu"></textarea> <br>
+                    <br><textarea name="contenu" id="contenu" placeholder="Son contenu"></textarea> <br>
                   </div>
                 </div>
                 <div class="row text-center  ">                 
-                    <br><button type="submit" class="button-sauvegarde">Sauvegarder</button>               
+                    <br><button type="submit" id="buttonsauvegarde"  class="button-sauvegarde">Sauvegarder</button>               
                 </div>                
-            </form>              
+            </form>            
            </div>
       </section>             
    </main>   
@@ -165,7 +166,8 @@
 </section> 
         
     </footer>     
-                      
+   <script src="ScriptMenu.js" defer></script>
+   <script src="ajoutactualite.js" defer></script>                   
   </body>
 </html>
 

@@ -3,10 +3,11 @@ body{
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  align-items: center;
 }
 
-.contenair {
-  max-width: 1200px;
+.container {
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -15,7 +16,6 @@ body{
   flex-wrap: wrap;
 
 }
-
 
 .col-100{
   width: 100%;
@@ -58,19 +58,16 @@ body{
   width: 50%;
 }
 
-
-
-
 .mt-50{
   margin-top: 80px;
 
 }
-
 .gr-back{
   background-color: #469B61;
   width: 1200px;
-  height: 200px;
+  height: 300px;
   margin-left: 10%;
+   position: relative;
 }
 .gray-back{
   width: 200px;
@@ -96,19 +93,21 @@ body{
 .color1 {
   color: #C8FF00;
   font-size: 50px;
-  font-weight :bolder; /* ecriture en gras */
+  font-weight :bolder;  
 }
+
 .color2 {
   color: #469B61;
   font-size: 50px;
   font-weight :bolder;
 }
-
-
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 780px) {
   
     .col-sm-100{
         width: 100%;
+      }
+      .col-sm-80{
+        width: 80%;
       }
       .col-sm-50{
         width: 50%;
@@ -116,11 +115,16 @@ body{
       .col-sm-30{
         width: 33%;
       }
+      .color2 {
+      color: #469B61;
+      font-size: 35px;
+     font-weight :bolder;
+    }
 
       .gr-back{
   
-        width: 1200px;
-        height: 320px;
+        width: 500px;
+        height: 500px;
    
       }
       .taille30{
@@ -131,30 +135,46 @@ body{
         max-width:  350px;
       }
 
-      .row .button-maj{ 
-        padding:  5px 5px;
-        margin-left: 5px ;
+      #buttonmaj{ 
+        padding:  5px 7px;
+        display: flex;
+        margin-right:5px;
+       margin-left: 80px;
+       bottom: 55px;
+       position: absolute;
+        
       }
-      .row .button-suprimer{
-        padding:  5px 12px;
-        margin-left: 5px ;     
-
-      }
-      .row .button-modif{
-        margin-left: 5px;        
-      }
-      .row .button-supr{
-        margin-left: 5px;
-      }
+     #buttonsup{
+        padding:  5px 8px;
+        display: flex;        
+        margin-bottom: 00px; 
+        margin-left: 300px;
+   
       
+
+      }
+       
       .bl-back1{
-        max-width:  420px;  
+        max-width:  500px; 
+        position: relative; 
 
-    }    
+    }   
+    button.button-supr{ 
+    margin: 5px 200px 1px 400px; 
+    position: absolute;
+    bottom: 20px;
+    width: 20%;
+      
+    }
+    button.button-modif{
+      padding: 2px 1px;
+     margin: 5px 10px  1px 10px; 
+    position: absolute;
+     bottom: 20px;  
+     width: 20%;
+    }
     
-  }
-
-  
+  }  
   .button-ajout{
     background-color: #C8FF00;
     border: none;
@@ -167,39 +187,36 @@ body{
     border-radius:20px;    
     cursor: pointer;   
   }
-  .button-modif{
-    background-color: orange;
-    border: none;
-    color: white;
-    padding: 2px 30px ;
-    text-align: center;    
-    font-size: 20px;
-    border-radius:3px;
-    cursor: pointer; 
-    margin: 20px 1px 1px 100px; 
-   
-   
-    
-
-    
-  }
+  
   .button-supr{
     background-color: red;
     border: none;
     color: white;
-    padding: 2px 30px;
+    padding: 2px 3px;
     text-align: center;
     font-size: 20px;
     border-radius:5px;    
     cursor: pointer;   
-    /*margin: 20px  1px ; */
-    margin: 20px 1px 1px 70px; 
+    margin: 5px 100px 1px 1000px; 
+    position: absolute;
+    bottom: 10px; 
+   
+  }
     
-    
-
-  
-
-    }
+    .button-modif{
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 3px 3px;
+    text-align: center;
+    font-size: 20px;
+    border-radius:5px;    
+    cursor: pointer;  
+    margin: 0px 20px 1px 800px; 
+     position: absolute;
+     bottom: 10px;
+       
+  }    
   .button-sauvegarde{ 
     margin: 3%  auto;
     background-color: #C8FF00;
@@ -219,21 +236,18 @@ body{
     background-color: #C8FF00;
     border: none;
     color: black;
-    padding:  15px 45px;
+     padding:  5px 70px;
     text-align: center;    
     font-size: 20px;
     font-weight: bold ;
     border-radius:50px;    
     cursor: pointer;
-    margin-left: 350px;    
- 
-    }  
+    margin-left: 400px;
+    margin-right:200px;
+     
+   }     
 
-      
-  
-
-  .button-suprimer{ 
-  
+  .button-suprimer{   
     background-color: red;
     border: none;
     color: white;
@@ -243,8 +257,8 @@ body{
     font-weight: bold ;
     border-radius:50px;    
     cursor: pointer; 
-   margin-left: 50px;
-   margin-right:350px;
+   margin-right:100px;
+    margin-left: 50px;
 
   }  
 
@@ -269,6 +283,7 @@ body{
   padding-left: 15px;
   padding-top: 15px;
   }
+
   ::placeholder  {
     color: white;
     font-family: "Poppins", sans-serif;
@@ -276,10 +291,12 @@ body{
   .taille30 {
   font-size: 30px;
 }
+
 .bl-back1{
   background-color: #183A43;
   width: 1300px;
    height: 600px;
    margin-left: 7%;
-   border-radius : 10px;  
+   border-radius : 10px; 
+  
 }

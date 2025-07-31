@@ -3,7 +3,11 @@ body{
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
 
+}
 /* menu */ 
 header {
     background-color: #ffffff;
@@ -45,57 +49,7 @@ header {
     display: none;
     
   }
-  
-  
-  
-  @media screen and (max-width: 768px) {
-    .menu {
-      display: none;
-    }
-  
-    .burger {
-      display:flex;
-      flex-direction:column;
-       cursor: pointer;
-    }
-    .burger span {
-      width: 25px;
-      height: 3px;
-      background-color: black;
-      margin: 4px;
-      transition:0,3s;
-    }
-  
-    .menu.active {
-      display: block;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #333;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .menu.active ul {
-      flex-direction:column;
-    }
-  
-    .menu.active ul li {
-      margin: 15px 0;
-    }
     
-    
-  }
-  
-
-
-  /* footer */
-
-  .contenair {
-    max-width: 1200px;
-    margin: 0 auto;
-  
-  }
 
   .marge-auto {
    
@@ -105,8 +59,7 @@ header {
   
   .row{
     display:flex;
-    flex-wrap:wrap;
-  
+    flex-wrap:wrap;  
   }
   
   
@@ -184,7 +137,8 @@ header {
   }
 
 
-  @media screen and (max-width: 760px) {
+
+  @media screen and (max-width: 780px) {
   
 .col-sm-100{
         width: 100%;
@@ -192,6 +146,41 @@ header {
   .col-sm-50{
         width: 50%;
   }  
+
+  
+   /*    menu ---------*/
+  .menu {
+      display: none;
+    }
+  
+    .burger {
+      display:flex;
+      flex-direction:column;
+       cursor: pointer;
+    }
+    .burger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      background-color: black;
+      margin: 4px;
+      
+    }
+    .navbar {
+      flex-wrap: wrap;
+    }
+    .menu ul {
+      
+      justify-content: center;
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      margin: 100px;
+      gap: 80px;
+
+    }
+
+  /*     ---------------*/
  .connexion1 {
         display : none;
   }
@@ -200,10 +189,14 @@ header {
       display : block;
  } 
 .marge-centre  {
-        margin-left: 25%;
+        margin-left: 200px;
   } 
+
+  .container .marge  {
+    margin-left: 80px;
+} 
   .bouton-connecter{
-    margin: 20px 20px ;
+    margin: 20px 150px ;
 
   } 
       
@@ -228,10 +221,7 @@ header {
   font-size: 22px;
   margin: 15px 15px 20px 23px;
 }
-/*.taille20{
-  font-size: 20px;
-  margin-bottom: 50px ;
-}*/
+
 .marge50 {
   margin-left: 50px;
 }
@@ -241,39 +231,40 @@ header {
   margin : 20px -90px 20px 90px ;
 }   
 
- .marge {
-      color :white; 
-      margin : 150px 5px 10px 20px ;     
-    }
-    .marge-twit {
-      color :white;     
-      margin : 120px 10px 20px 5px ;     
-    }
-    .marge-insta {
-      color :white;     
-      margin : 120px 5px 20px 5px ;     
-    }
+.marge {
+ color :white; 
+ margin : 150px 5px 10px 20px ;     
+}
+.marge-twit {
+ color :white;     
+ margin : 120px 10px 20px 5px ;     
+}
+.marge-insta {
+  color :white;     
+  margin : 120px 5px 20px 5px ;     
+}
     
 .marge-galerie {
-      min-width: 100%;
-    }
- .marge-5{
-      padding-right: 5px;
-    }
+  min-width: 100%;
+ }
+.marge-5{
+ padding-right: 5px;
+}
+
 .gr-marge{
-      margin : 10px 50px 10px 50px;
-      font-size: 20px;   
-    }
+  margin : 10px 50px 10px 50px;
+  font-size: 20px;   
+ }
   
     
 .marge20 {
-      margin-left: 20px;
-    }
+ margin-left: 20px;
+}
        
  
 .color-yellow {
-      color: #C8FF00;
-    }
+color: #C8FF00;
+}
   
     
 

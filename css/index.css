@@ -2,40 +2,35 @@ body{
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  align-items: center;
 }
-
+.container  {
+  max-width: 1500px;
+  margin: 0 auto;
+}
 .banner{
-  width: 100%;
-  height: 700px;
+  width: 105%;
+  height: 800px;
   object-fit: cover;
-  position: relative;
-
+  margin-left: -45px;  
 }
 
 
 .text-below {
-   position:absolute;
+  position:absolute;
+  z-index: 2;
   color :blanchedalmond;
-  font-size: 50px; 
-  font-weight:400 ;  /* police en gras*/
+  font-size: 50px;
+  font-weight:400 ;   
   text-align: right;
   padding-left: 40%;
-   top: 70%;   /* ecriture en bas*/
-  
-   
-
- 
+  bottom: -10%;
 }
+
  em{
   color: #C8FF00;
   font-weight :bolder;
   font-size: 60px;     
-}
-  
-.contenair {
-  max-width: 1200px;
-  margin: 0 auto;
-
 }
 
 .color1 {
@@ -128,9 +123,8 @@ body{
   width: 650px;
   height: 420px;
   border-radius:20px; 
-  margin-left: 100px ; 
-  /*margin-right: 0; 
-  margin :auto;*/
+  margin-left: 60px ; 
+  
 }
 .team1-image{
   position: absolute;
@@ -141,8 +135,7 @@ body{
  .image {
     width: 60px;
     height:50px ;
-    }
-  
+  } 
 
   .team2-image{
     position: absolute;
@@ -154,7 +147,7 @@ body{
   .box { 
     position:relative ;
     width: 650px;
-    height: 420px;
+    height:auto   ;
     padding: 0.5em;
     border: 1px solid black;
     border-radius:20px;
@@ -194,10 +187,11 @@ body{
 
 
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 780px) {
   
   .col-sm-100{
       width: 100%;
+      position: relative;
     }
     .col-sm-50{
       width: 50%;
@@ -205,17 +199,26 @@ body{
     .col-sm-30{
       width: 33%;
     }
-    .text-below {      
-     font-size: 30px;
+    .banner{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;    
+    }
+    
+   
+    .text-below { 
+      position:absolute ;  
+      z-index: 1;   
+     font-size: 20px;
      white-space: nowrap;
      text-align: center;
      padding:10%;
-     margin :10px 3px 200px 3px;
-   
+       
     }
+    
     .text-below em {      
       font-size: 35px;
-      /*margin-right: 40px;*/
+      margin: 3px 30px 3px -60px;
          }
 
     .gr-back{   
@@ -223,17 +226,10 @@ body{
          
        }
        .team-image1  {
-        /*width: 480px;
-        margin-left: 3px;
-        margin-right: 0;*/
-        display: none;     
-        
-         } 
-           
+       display: none;         
+         }  
       
-         
-         }
-     
+      }  
   
 
   .contact {
@@ -259,18 +255,17 @@ body{
     border-right: none;
     border-left: none;     
     letter-spacing: 1px;    
-    font-size: 20px; 
-    
+    font-size: 20px;   
   
   }
 
   textarea   {  
-    width: 1390px; 
+    width: 1350px; 
   height: 300px;
 
   }
   .email  {  
-  width: 1390px; 
+  width: 1350px; 
   height: 80px ;
  
   } 
@@ -289,30 +284,23 @@ body{
     margin: 10px 40px 80px 0;    
     font-weight :bolder;
    
-  }
-
-
-  
+  } 
 
   .wrapper {
     display: flex;
-  }
-
- 
+  } 
 
 /*Sliders */
 
 
 .slider {
-  margin: auto;  /*margin: 10px 50px 10px 140px;*/
+  margin: auto;   
   width: 90%; 
   max-width: 1500px;
-  overflow: hidden;
-  border-radius: 10px;
-                          /* box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.3);  rajour un peu d'ombre aux images    */  
+  overflow: hidden; /* pour cacher les images*/
+  border-radius: 10px;                          
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
 
 }  
   .slides {
@@ -321,27 +309,24 @@ body{
   }
   .slide {
     min-width: 100%;
+    transition : all  0.5s;
 
   }
-  .slide img{
-    /*la taille de l image suit la largeur du slide */
-    width: 100%;
-    height: auto;    
-    display: block; 
+  .slide img{    
+    width: 100%; /*la taille de l image suit la largeur du slide */
+    height: 768px;   
+    display: block; /* pour que le  width: 100%; s affiche bien*/
   }
   .navigation{
     /*superposer les fleches sur le slider  por cela on rajoute "position absolute"et dans slider "position relative"*/
-
     top: 90%;
     width: 100%;/* element de navigation prend toute la largeur*/
     /*espaces entre les fleches */
     display: flex;
     justify-content: space-between;
-  }
-  
+  } 
 
    #next{
-    margin-right: 80px;
     background-color: black;
     color:#C8FF00;
     border: none;
@@ -352,7 +337,6 @@ body{
 
   }
   #prev{
-    margin-left: 80px;
     background-color: white;
     color: black;  
     padding: 8px 20px;
@@ -363,237 +347,3 @@ body{
   }
   
 
-
-
-/*
-.section-équipe h1{
-  text-align: center;
-  font-size: 50px;
-  color: #469B61;
-}
-.section-équipe img { 
-  display: inline-block ;  
-  padding: 50px;  
-  border-radius: 50% ;
-  margin: 5px 10px 10px 5px;
-}
-
-
-section p{
-  color: black;
-  font-size: 40px;
-  margin-top: 5px;
-  }
-
-  #titre p{
-    font-weight :bolder; 
-    font-size: 40px;
-    margin-bottom: 10%;
-  }
-
-#nombre  {
-  background-color:#0C2227;
-  font-size: 10px;
-  background-repeat: repeat-x;
-    
-}
- 
- #nombre em{
-    color: rgb(187, 236, 52);
-    font-size: 40px;
-    margin: 30px;
-    font-weight :bolder;
-   }
-#nombre p{
-  color: blanchedalmond;
-  font-size: 20px;
-  margin-bottom: 10px;
-
-}
-#service h2 {
-  text-align: center;
-  font-size: 50px;
-  color: #469B61;
-  margin-top: 10%;
-  
-  
-}
-.section-service img {
-  margin : 20px 50px 20px 400px;
- 
-  text-align: center;
-}
-.section-service p{
-  font-size: 40px;
-  font-weight :bolder;
-  margin-bottom: 40px;
-}
-
-#actualité h3 {
-  text-align: center;
-  font-size: 50px;
-  color:  #469B61;
-
-}
-
-#actualité p {
-  color: #F4F6F5;
-  font-size: 30px;
-  background-color: #469B61;
-  margin: 5px 100px 20px 100px ;
-
-}
-
-#contact {
-  background-color: #0C2227;
-}
-#contact p{
-  text-align: center; 
-  color: blanchedalmond;
-}
- 
-#contact h4 {
-  text-align: center;
-  font-size: 50px;
-  color: #C8FF00;
-}
-   
-form {
-  display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: auto;
-    color: white;
-
-}
-
-  
-
-.contact-nom {
-  display: flex;
-    flex-direction: row;
-    gap: 20px;
-   
-
-
-}
-.nom {
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-   
-
-
-}
-
-.contact-tel {
-  display: flex;
-    flex-direction: row;
-    gap: 20px;
-
-
-
-}
-
-.tel {
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-.contact-mail {
-  flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-textarea{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  background: transparent;
-  border-bottom: 1px solid blanchedalmond;
-  border-top: none;
-  border-right: none;
-  border-left: none; 
-  margin-top: 30px;
-  
-} 
-
-input  {
-  
-  width: 240px;
-  height: 35px;
-  background: transparent;
-  border-bottom: 1px solid blanchedalmond;
-  border-top: none;
-  border-right: none;
-  border-left: none; 
-  font-size: 15px;
-  letter-spacing: 1px;
-  margin-top: 30px;
-font-size: 30px;
-
-
-}
-
-
-  input[type='submit'] {
-    width: 200px;
-    margin: auto;
-    margin-top: 30px;
-  }
-
-
-
-
-.jason img{
-  background-size: 150px;
-  width: 500px;
-  height: 500px;
-  border: 2px solid;
-  
-  
-    
-  
-  }
-  nav {
-   text-align: center;
-    width: 800px;
-  height: 500px;
-  border: 2px solid;  
-  margin: 2px 2px 20px 500px;
-  }
-  nav img{
-    padding: 50px;  
-  border-radius: 50% ;
-  margin: 5px 10px 10px 5px;
-
-  }
-  
-    
-  #galerie  h5{
-    text-align: center;
-  font-size: 50px;
-  color: #255919;
-  }
-
-
- button{
-    background-color: #43c032;
-    border: none;
-    color: black;
-    padding: 20px 34px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 100px 4px 700px ;
-    cursor: pointer;
-  }
-    */
-        
